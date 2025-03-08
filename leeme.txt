@@ -1,0 +1,2 @@
+El servidor atiende una sola petición del cliente, tras la cual se desconecta de ese cliente.
+Si quiere algo más tendrá que volver a conectarse.
