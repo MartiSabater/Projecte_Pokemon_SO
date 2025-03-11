@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.consultaPokedex = new System.Windows.Forms.RadioButton();
             this.Longitud = new System.Windows.Forms.RadioButton();
             this.Bonito = new System.Windows.Forms.RadioButton();
             this.Usuario = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.UsuarioRegistrarse = new System.Windows.Forms.Label();
             this.textConRR = new System.Windows.Forms.TextBox();
             this.RepetirContraseña = new System.Windows.Forms.Label();
-            this.consultaPokedex = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             // IP
             // 
             this.IP.Location = new System.Drawing.Point(112, 64);
-            this.IP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IP.Margin = new System.Windows.Forms.Padding(4);
             this.IP.Name = "IP";
             this.IP.Size = new System.Drawing.Size(172, 22);
             this.IP.TabIndex = 2;
@@ -74,7 +74,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(383, 57);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 38);
             this.button1.TabIndex = 4;
@@ -85,7 +85,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(61, 140);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 5;
@@ -101,20 +101,32 @@
             this.groupBox1.Controls.Add(this.Bonito);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Location = new System.Drawing.Point(32, 430);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(484, 249);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Peticion";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // consultaPokedex
+            // 
+            this.consultaPokedex.AutoSize = true;
+            this.consultaPokedex.Location = new System.Drawing.Point(41, 105);
+            this.consultaPokedex.Margin = new System.Windows.Forms.Padding(4);
+            this.consultaPokedex.Name = "consultaPokedex";
+            this.consultaPokedex.Size = new System.Drawing.Size(233, 20);
+            this.consultaPokedex.TabIndex = 9;
+            this.consultaPokedex.TabStop = true;
+            this.consultaPokedex.Text = "Dame informacion de Charmander";
+            this.consultaPokedex.UseVisualStyleBackColor = true;
+            // 
             // Longitud
             // 
             this.Longitud.AutoSize = true;
             this.Longitud.Location = new System.Drawing.Point(41, 77);
-            this.Longitud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Longitud.Margin = new System.Windows.Forms.Padding(4);
             this.Longitud.Name = "Longitud";
             this.Longitud.Size = new System.Drawing.Size(245, 20);
             this.Longitud.TabIndex = 7;
@@ -126,7 +138,7 @@
             // 
             this.Bonito.AutoSize = true;
             this.Bonito.Location = new System.Drawing.Point(41, 49);
-            this.Bonito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bonito.Margin = new System.Windows.Forms.Padding(4);
             this.Bonito.Name = "Bonito";
             this.Bonito.Size = new System.Drawing.Size(214, 20);
             this.Bonito.TabIndex = 8;
@@ -241,18 +253,6 @@
             this.RepetirContraseña.TabIndex = 17;
             this.RepetirContraseña.Text = "Repite la \r\nContraseña";
             // 
-            // consultaPokedex
-            // 
-            this.consultaPokedex.AutoSize = true;
-            this.consultaPokedex.Location = new System.Drawing.Point(41, 105);
-            this.consultaPokedex.Margin = new System.Windows.Forms.Padding(4);
-            this.consultaPokedex.Name = "consultaPokedex";
-            this.consultaPokedex.Size = new System.Drawing.Size(217, 20);
-            this.consultaPokedex.TabIndex = 9;
-            this.consultaPokedex.TabStop = true;
-            this.consultaPokedex.Text = "Dime el pokemon con mas vida";
-            this.consultaPokedex.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,7 +274,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.IP);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
