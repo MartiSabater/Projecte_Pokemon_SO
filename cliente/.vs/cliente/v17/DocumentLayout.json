@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\share\\Parte_1_ServidorSecuencial_1\\Parte_1_ServidorSecuencial_1\\cliente\\",
+  "WorkspaceRootPath": "C:\\share\\Projecte_Pokemon_SO\\cliente\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5E08E40-5E04-41A2-AFB5-56E3E3274D24}|WindowsFormsApplication1\\clienteForm.csproj|c:\\share\\parte_1_servidorsecuencial_1\\parte_1_servidorsecuencial_1\\cliente\\windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F5E08E40-5E04-41A2-AFB5-56E3E3274D24}|WindowsFormsApplication1\\clienteForm.csproj|c:\\share\\projecte_pokemon_so\\cliente\\windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5E08E40-5E04-41A2-AFB5-56E3E3274D24}|WindowsFormsApplication1\\clienteForm.csproj|solutionrelative:windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5E08E40-5E04-41A2-AFB5-56E3E3274D24}|WindowsFormsApplication1\\clienteForm.csproj|C:\\share\\Projecte_Pokemon_SO\\cliente\\windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F5E08E40-5E04-41A2-AFB5-56E3E3274D24}|WindowsFormsApplication1\\clienteForm.csproj|solutionrelative:windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e78e0cf7-2e4e-48a7-bf7f-a94d9330a3be}"
@@ -35,14 +35,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\share\\Parte_1_ServidorSecuencial_1\\Parte_1_ServidorSecuencial_1\\cliente\\WindowsFormsApplication1\\Form1.cs",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\share\\Projecte_Pokemon_SO\\cliente\\WindowsFormsApplication1\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApplication1\\Form1.cs",
-              "ToolTip": "C:\\share\\Parte_1_ServidorSecuencial_1\\Parte_1_ServidorSecuencial_1\\cliente\\WindowsFormsApplication1\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\share\\Projecte_Pokemon_SO\\cliente\\WindowsFormsApplication1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApplication1\\Form1.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAYwIIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T16:31:44.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\share\\Projecte_Pokemon_SO\\cliente\\WindowsFormsApplication1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Form1.cs",
+              "ToolTip": "C:\\share\\Projecte_Pokemon_SO\\cliente\\WindowsFormsApplication1\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "WindowsFormsApplication1\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T15:37:18.156Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-03-05T15:37:18.156Z"
             }
           ]
         }

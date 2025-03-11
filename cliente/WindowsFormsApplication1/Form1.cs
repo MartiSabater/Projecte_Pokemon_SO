@@ -21,7 +21,24 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Inicio Sesion
+            Usuario.Visible = false;
+            textUsu.Visible = false;
+            Contraseña.Visible = false;
+            textContra.Visible = false;
+            SignIn.Visible = false;
 
+            //Resitrarse
+            UsuarioRegistrarse.Visible = false;
+            textUsuR.Visible = false;
+            ContraseñaRegistrarse.Visible = false;
+            textContraR.Visible = false;
+            RepetirContraseña.Visible = false;
+            textConRR.Visible = false;
+            SignUp.Visible = false;
+
+            //Consultas 
+            groupBox1.Visible = false;
            
         }
 
@@ -41,6 +58,25 @@ namespace WindowsFormsApplication1
                 this.BackColor = Color.Green;
                 MessageBox.Show("Conectado");
 
+                //Inicio Sesion
+                Usuario.Visible = true;
+                textUsu.Visible = true;
+                Contraseña.Visible = true;
+                textContra.Visible = true;
+                SignIn.Visible = true;
+
+                //Resitrarse
+                UsuarioRegistrarse.Visible = true;
+                textUsuR.Visible = true;
+                ContraseñaRegistrarse.Visible = true;
+                textContraR.Visible = true;
+                RepetirContraseña.Visible = true;
+                textConRR.Visible = true;
+                SignUp.Visible = true;
+
+                //Consultas 
+                groupBox1.Visible = true;
+
             }
             catch (SocketException ex)
             {
@@ -53,22 +89,9 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Longitud.Checked)
+            if (Longitud.Checked) //Consulta Primera partida que he echo
             {
-                string mensaje = "1/" + nombre.Text;
-                // Enviamos al servidor el nombre tecleado
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                server.Send(msg);
-
-                //Recibimos la respuesta del servidor
-                byte[] msg2 = new byte[80];
-                server.Receive(msg2);
-                mensaje = Encoding.ASCII.GetString(msg2).Split (',')[0];
-                MessageBox.Show("La longitud de tu nombre es: " + mensaje);
-            }
-            else
-            {
-                string mensaje = "2/" + nombre.Text;
+                string mensaje = "3/" + textUsu.Text;
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
@@ -77,14 +100,38 @@ namespace WindowsFormsApplication1
                 byte[] msg2 = new byte[80];
                 server.Receive(msg2);
                 mensaje = Encoding.ASCII.GetString(msg2).Split(',')[0];
-              
+                MessageBox.Show("La Primera partida que hize fue" + mensaje);
+            }
+            else if (consultaPokedex.Checked) //Consulta que pokemon tiene mayo vida.
+            {
+                string mensaje = "4/" + textUsu.Text;
+                // Enviamos al servidor el nombre tecleado
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
 
-                if (mensaje=="SI")
-                    MessageBox.Show("Tu nombre ES bonito.");
-                else
-                    MessageBox.Show("Tu nombre NO bonito. Lo siento.");
+                //Recibimos la respuesta del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                mensaje = Encoding.ASCII.GetString(msg2).Split(',')[0];
+
+                MessageBox.Show("El pokemon con mas vida es el " + mensaje);
 
             }
+            else if (Bonito.Checked) //Consulta Cuantos pokemos tengo.
+            {
+                string mensaje = "5/" + textUsu.Text;
+                // Enviamos al servidor el nombre tecleado
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
+
+                //Recibimos la respuesta del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                mensaje = Encoding.ASCII.GetString(msg2).Split(',')[0];
+                MessageBox.Show("Tengo " + mensaje + " pokemons");
+            }
+            else
+                MessageBox.Show("Seleciona la estadistica que quieras consultar");
 
             // Se terminó el servicio. 
             // Nos desconectamos
@@ -94,6 +141,58 @@ namespace WindowsFormsApplication1
 
         }
 
-     
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUp_Click(object sender, EventArgs e)
+        {
+            if (textContraR == textConRR && textConRR.Text.Length != 0 && textContraR.Text.Length != 0 && textUsuR.Text.Length != 0)
+            {
+                string mensaje = "1/" + textUsuR.Text + textContra.Text;
+                // Enviamos al servidor el nombre tecleado
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
+
+                //Recibimos la respuesta del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                mensaje = Encoding.ASCII.GetString(msg2).Split(',')[0];
+
+                if (mensaje == "Ok")
+                    MessageBox.Show("Te has registrado correctamente");
+                else
+                    MessageBox.Show("Este Usuario ya esta en uso Prueba con otra");
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas son diferentes, mira si hay un error Ortografico. O rellena los campos vacios");
+            }
+        }
+
+        private void SignIn_Click(object sender, EventArgs e)
+        {
+            if (textUsu.Text.Length != 0 && textContra.Text.Length != 0)
+            {
+                string mensaje = "2/" + textUsu.Text + textContra.Text;
+                // Enviamos al servidor el nombre tecleado
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
+
+                //Recibimos la respuesta del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                mensaje = Encoding.ASCII.GetString(msg2).Split(',')[0];
+
+                if (mensaje == "Ok")
+                    MessageBox.Show("Bienvenido");
+                else
+                    MessageBox.Show("Contraseña y/o Usuario son incorrectos");
+            }
+            else
+                MessageBox.Show("Rellena los campos que estan vacios");
+            
+        }
     }
 }
